@@ -5,17 +5,12 @@
 
 int main(int argc, char *argv[]) {
 	
-	int i=10;
-	char c= 'a';
+	int i = 300;
 	
-	int *iptr = &i; /*초기화를 i값으로 하고 i를 가르키니까 int형*/
-	char *cptr = &c;
-	int *iptr2 = iptr; /*iptr 자체가 포인터라서 &연산자 필요 없음*/ 
-
+	int *pi = &i;
+	char *pc = &i; /*가장 아래쪽 바이트가 44*/ 
 	
-	printf("i : %p\n%p (size : %i)\n", iptr, &i, sizeof(iptr));
-	printf("c : %p\n%p (size : %i)\n", cptr, &c, sizeof(cptr));
-	printf("iptr2 : %p, %i\n", iptr2, *iptr2);
+	printf("%i %i %i\n", i, *pi, *pc); 
 	
 	return 0;
 }
